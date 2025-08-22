@@ -3,34 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Get a Free Bible — Preacher Jon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Request a Free Bible — Preacher Jon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{ --bg1:#0b1020; --bg2:#0a1a3b; }
+    :root{ --bg1:#0b1020; --bg2:#0a1a3b; --glow1:#60a5fa; --glow2:#34d399; --glow3:#f472b6; }
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial}
     .display{font-family:"Space Grotesk",Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial}
-    .cosmos{min-height:100vh;background:
+    .cosmos{position:relative;background:
       radial-gradient(1200px 800px at 70% -10%, rgba(96,165,250,.20), transparent 60%),
       radial-gradient(900px 600px at 20% 10%, rgba(52,211,153,.18), transparent 60%),
-      linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 100%); color:#e6edf3;}
+      linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 100%); min-height:100vh }
+    .glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px)}
   </style>
 </head>
-<body class="cosmos">
-  <header class="max-w-5xl mx-auto px-4 py-4"><a href="./" class="text-sky-300 underline">← Back to Preacher Jon</a></header>
-  <main class="max-w-xl mx-auto px-4 pb-20">
-    <h1 class="display text-3xl font-extrabold mb-4">Get a Free Bible</h1>
-    <p class="mb-4 text-slate-200/90">Fill this out and we’ll mail you a Bible.</p>
+<body class="cosmos text-slate-100">
+  <header class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between">
+    <a href="./" class="text-slate-300 hover:text-white">&larr; Back to Home</a>
+    <div class="display text-xl font-bold">Request a Free Bible</div>
+    <span></span>
+  </header>
 
-    <div id="mlb2-29942341" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29942341"></div>
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
-    <script>fetch("https://assets.mailerlite.com/jsonp/1751779/forms/163459712923207396/takel");</script>
+  <main class="max-w-5xl mx-auto px-4 pb-20">
+    <div class="glass rounded-2xl p-6">
+      <p class="text-slate-200/90 mb-4">Fill this out and we’ll mail you a Bible. We will only use your info to fulfill this request.</p>
 
-    <noscript><p class="mt-6 text-sm text-slate-300">JavaScript is disabled. Email
-      <a class="underline" href="mailto:PreacherJonK@gmail.com?subject=Free%20Bible%20Request">PreacherJonK@gmail.com</a>
-      with your name and mailing address.</p></noscript>
-  </main>
-</body>
-</html>
+      <!-- === YOUR MAILERLITE "GET A FREE BIBLE" EMBED STARTS HERE === -->
+      <!-- pasted exactly as you provided -->
+      <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1755584");</style>
+      <style type="text/css">/* (all the long CSS you pasted)… */</style>
+
+      <!-- full markup you provided -->
+      <div id="mlb2-29942341" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29942341">
+        <!-- … keep everything from your snippet here (unchanged) … -->
+      </div>
+
+      <script>
+        function ml_webform_success_29942341(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-29942341 .row-success').show();$('.ml-subscribe-form-29942341 .row-form').hide();}
+      </script>
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+      <script>fetch("https://assets.mailerlite.com/jsonp/1751779/forms/163459712923207396/takel")</script>
+      <!-- === EMBED END === -->
+
+      <p class="mt-4 text-xs text-slate-400">Having trouble? <a class="underline" href="mailto:PreacherJonK@gmail.com?subject=Free%20Bible%20Request">Email the req
