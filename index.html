@@ -4,245 +4,254 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Preacher Jon — Jesus at the Center</title>
-  <meta name="description" content="Preacher Jon — pointing people to Jesus in everyday places. Ministries like Righteous Rides put Scripture within reach with gentleness and respect." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    :root{ --bg1:#0b1020; --bg2:#0a1a3b; --glow1:#60a5fa; --glow2:#34d399; --glow3:#f472b6; }
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial}
-    .display{font-family:"Space Grotesk",Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial}
-    .cosmos{position:relative; background:
-      radial-gradient(1200px 800px at 70% -10%, rgba(96,165,250,.20), transparent 60%),
-      radial-gradient(900px 600px at 20% 10%, rgba(52,211,153,.18), transparent 60%),
-      linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 100%); overflow-x:clip;}
-    .cosmos:before,.cosmos:after{content:"";position:absolute;inset:-10%;
-      background-image:radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,.12) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 30% 80%, rgba(255,255,255,.10) 50%, transparent 51%),
-      radial-gradient(1.8px 1.8px at 70% 30%, rgba(255,255,255,.10) 50%, transparent 51%),
-      radial-gradient(2px 2px at 85% 60%, rgba(255,255,255,.08) 50%, transparent 51%); pointer-events:none;}
-    .cosmos:after{filter:blur(1px);opacity:.8;animation:drift 16s linear infinite alternate;}
-    @keyframes drift{from{transform:translateY(-1%)} to{transform:translateY(1%)}}
-    .glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px)}
-    .grad{background:linear-gradient(90deg, var(--glow1), var(--glow2), var(--glow3));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .btn-glow{box-shadow:0 10px 30px rgba(96,165,250,.35)} .btn-glow:hover{box-shadow:0 14px 38px rgba(96,165,250,.55)}
+    :root{
+      --ink:#0b1020;
+      --ink2:#0a1430;
+      --accent:#f59e0b; /* gold for “Jesus” */
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial;background:radial-gradient(1200px 700px at 70% -10%, rgba(245,158,11,.18), transparent 60%), radial-gradient(900px 600px at 10% 0%, rgba(59,130,246,.16), transparent 60%), linear-gradient(180deg, var(--ink2), var(--ink)); color:#e5eeff}
+    .display{font-family:"Space Grotesk", Inter, system-ui, -apple-system, Segoe UI, Roboto}
+    .glass{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); backdrop-filter:blur(10px)}
+    .btn{display:inline-flex; align-items:center; justify-content:center; padding:.75rem 1rem; border-radius:.75rem; font-weight:700}
+    .btn-primary{background:#3b82f6; color:#fff}
+    .btn-primary:hover{background:#2563eb}
+    .btn-ghost{background:rgba(255,255,255,.08)}
+    .btn-ghost:hover{background:rgba(255,255,255,.14)}
+    .container{max-width:1100px}
+
+    /* Subtle cross behind hero */
+    .hero{position:relative; overflow:hidden}
+    .hero svg.cross{
+      position:absolute; inset:0; pointer-events:none;
+      filter: drop-shadow(0 30px 80px rgba(0,0,0,.35));
+      opacity:.5;
+    }
+    @media (max-width: 640px){
+      .hero svg.cross{opacity:.35}
+    }
+    /* cards */
+    .card{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:1rem}
+  </style>
+
+  <!-- ==== MailerLite styles (exact, from your embed) ==== -->
+  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1755584");</style>
+  <style type="text/css">
+    .ml-form-embedSubmitLoad { display:inline-block; width:20px; height:20px; }
+    .ml-form-embedSubmitLoad:after { content:" "; display:block; width:11px; height:11px; margin:1px; border-radius:50%; border:4px solid #fff; border-color:#fff #fff #fff transparent; animation:ml-form-embedSubmitLoad 1.2s linear infinite }
+    @keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+    #mlb2-29942598.ml-form-embedContainer{box-sizing:border-box; display:table; margin:0 auto; position:static; width:100%!important}
+    #mlb2-29942598 .ml-form-embedWrapper{background:#f6f6f6; border-radius:4px; display:inline-block!important; margin:0; padding:0; position:relative}
+    #mlb2-29942598 .ml-form-embedWrapper.embedForm{max-width:480px; width:100%}
+    #mlb2-29942598 .ml-form-embedBody,#mlb2-29942598 .ml-form-successBody{padding:20px 20px 0 20px}
+    #mlb2-29942598 .ml-form-embedContent h4{color:#000; font-family:'Open Sans',Arial,Helvetica,sans-serif; font-size:30px; font-weight:400; margin:0 0 10px 0; text-align:left}
+    #mlb2-29942598 .ml-form-embedContent p{color:#000; font:400 14px 'Open Sans',Arial,Helvetica,sans-serif; line-height:20px; margin:0 0 10px 0; text-align:left}
+    #mlb2-29942598 .ml-form-fieldRow{margin:0 0 10px 0; width:100%}
+    #mlb2-29942598 input, #mlb2-29942598 textarea, #mlb2-29942598 select{
+      background:#fff!important; color:#333!important; border:1px solid #ccc; border-radius:4px!important; font:14px 'Open Sans',Arial,Helvetica,sans-serif!important; padding:10px!important; width:100%!important; box-sizing:border-box!important
+    }
+    #mlb2-29942598 .ml-form-embedSubmit button{background:#000!important; color:#fff!important; border:none!important; border-radius:4px!important; font:700 14px 'Open Sans',Arial,Helvetica,sans-serif!important; padding:10px!important; width:100%!important}
+    #mlb2-29942598 .ml-form-embedSubmit button:hover{background:#333!important}
   </style>
 </head>
-<body class="cosmos text-slate-100">
+
+<body>
   <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur border-b border-white/10 bg-white/5">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-6">
-      <a href="./" class="flex items-center gap-3">
-        <svg class="w-10 h-10" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Preacher Jon logo">
-          <circle cx="60" cy="60" r="40" fill="#60a5fa"/><circle cx="60" cy="60" r="34" fill="#0b1020"/>
-          <rect x="57" y="35" width="6" height="50" rx="3" fill="#60a5fa"/><rect x="35" y="57" width="50" height="6" rx="3" fill="#60a5fa"/>
-          <path d="M15 85c20-18 70-18 90 0" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round"/>
-        </svg>
-        <div>
-          <div class="display font-bold tracking-tight text-xl leading-5">Preacher Jon</div>
-          <div class="text-xs text-slate-300 -mt-0.5">Jesus at the Center • Truth & Grace</div>
-        </div>
-      </a>
-      <nav class="ml-auto flex flex-wrap gap-6 text-sm">
-        <a href="#ministries" class="hover:text-sky-300 font-medium">Ministries</a>
-        <a href="#righteous-rides" class="hover:text-sky-300 font-medium">Righteous Rides</a>
-        <a href="#socials" class="hover:text-sky-300 font-medium">Socials</a>
-        <a href="#donate" class="hover:text-sky-300 font-medium">Donate</a>
-        <a href="#contact" class="hover:text-sky-300 font-medium">Contact</a>
+  <header class="sticky top-0 z-50 bg-[rgba(10,14,30,.8)] backdrop-blur border-b border-white/10">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">✝︎</div>
+        <div class="display font-bold tracking-tight">Preacher Jon</div>
+      </div>
+      <nav class="hidden sm:flex items-center gap-2">
+        <a href="#top" class="btn btn-ghost text-white/90">Home</a>
+        <a href="#ministries" class="btn btn-ghost text-white/90">Ministries</a>
+        <a href="#booking" class="btn btn-primary">Booking</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="relative">
-    <div class="max-w-7xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h1 class="display text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-          Pointing people to <span class="grad">Jesus</span> in the mess of life.
+  <section id="top" class="hero">
+    <!-- Cross overlay (SVG) -->
+    <svg class="cross" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g opacity=".12">
+        <rect x="650" y="80" width="100" height="540" rx="8" fill="white"></rect>
+        <rect x="520" y="260" width="360" height="100" rx="8" fill="white"></rect>
+      </g>
+    </svg>
+
+    <div class="container mx-auto px-4 py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="display text-5xl sm:text-6xl font-extrabold leading-tight mb-6">
+          Pointing people to <span style="color:var(--accent)">Jesus</span> in the mess of life.
         </h1>
-        <p class="mt-5 text-lg text-slate-200/90">
+        <p class="text-white/85 text-lg max-w-2xl">
           Gospel-first, low-friction, high-kindness ministry. From front seats and back seats to timelines and comment sections—Christ proclaimed, consciences respected.
         </p>
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-sky-500 text-white font-semibold btn-glow hover:bg-sky-400"
-             href="mailto:PreacherJonK@gmail.com?subject=Contact%20%E2%80%94%20Preacher%20Jon&body=Hi%20Preacher%20Jon%2C%0A%0A(Write%20your%20message%20here.)%0A%0AName%3A%0ACity%2FState%3A%0A">Contact</a>
-          <a class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-white/10 border border-white/20 font-semibold hover:border-sky-400 hover:text-sky-200"
-             href="#ministries">Explore Ministries</a>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#booking" class="btn btn-primary">Book Jon</a>
+          <a href="#ministries" class="btn btn-ghost">Explore Ministries</a>
         </div>
-        <p class="mt-5 text-xs text-slate-300">“Faith comes from hearing, and hearing through the word of Christ.” — Romans 10:17</p>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <div class="text-sm text-slate-300 mb-2">What we’re about</div>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="rounded-xl p-4 bg-white/5 border border-white/10"><div class="text-xl font-bold grad display">Word</div><p class="text-slate-300 text-sm mt-1">Scripture in hands. Christ in view.</p></div>
-          <div class="rounded-xl p-4 bg-white/5 border border-white/10"><div class="text-xl font-bold grad display">Prayer</div><p class="text-slate-300 text-sm mt-1">We carry people to the throne of grace.</p></div>
-          <div class="rounded-xl p-4 bg-white/5 border border-white/10"><div class="text-xl font-bold grad display">Presence</div><p class="text-slate-300 text-sm mt-1">Gentle, respectful, opt-in witness.</p></div>
-          <div class="rounded-xl p-4 bg-white/5 border border-white/10"><div class="text-xl font-bold grad display">Joy</div><p class="text-slate-300 text-sm mt-1">Jesus is better than everything.</p></div>
-        </div>
+        <p class="mt-6 text-white/60 text-sm">“Faith comes from hearing, and hearing through the word of Christ.” — Romans 10:17</p>
       </div>
     </div>
   </section>
 
   <!-- Ministries -->
-  <section id="ministries" class="py-14">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="display text-3xl font-extrabold">Ministries</h2>
-      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a id="righteous-rides" href="#righteous-rides-detail" class="block rounded-2xl glass p-6 hover:border-sky-400 transition">
-          <div class="text-lg font-bold grad display">Righteous Rides</div>
-          <p class="text-slate-200/90 text-sm mt-2">Equipping rideshare drivers to offer Bibles and prayer—only if requested.</p>
-          <div class="mt-3 text-xs text-slate-300">Learn more ↓</div>
-        </a>
+  <section id="ministries" class="container mx-auto px-4 pt-6 pb-14">
+    <h2 class="display text-3xl font-bold mb-6">Ministries</h2>
 
-        <div class="rounded-2xl glass p-6">
-          <div class="text-lg font-bold display">Bible Requests</div>
-          <p class="text-slate-200/90 text-sm mt-2">Anyone can request a free Bible.</p>
-          <a class="mt-3 inline-block text-sm underline hover:text-sky-300" href="bible.html">Open Bible Request Form</a>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="card p-5">
+        <h3 class="font-bold text-xl">Righteous Rides</h3>
+        <p class="text-white/80 mt-1">Equipping rideshare drivers to offer Bibles and prayer—only if requested.</p>
+        <div class="mt-4">
+          <a href="#booking" class="btn btn-ghost">Get Involved</a>
         </div>
+      </div>
 
-        <div class="rounded-2xl glass p-6">
-          <div class="text-lg font-bold display">Prayer & Care</div>
-          <p class="text-slate-200/90 text-sm mt-2">Send a request; we pray and follow up as desired.</p>
-          <a class="mt-3 inline-block text-sm underline hover:text-sky-300" href="prayer.html">Open Prayer Form</a>
+      <div class="card p-5">
+        <h3 class="font-bold text-xl">Bible Requests</h3>
+        <p class="text-white/80 mt-1">Anyone can request a free Bible.</p>
+        <div class="mt-4">
+          <a href="#booking" class="btn btn-ghost">Open Request Form</a>
+        </div>
+      </div>
+
+      <div class="card p-5">
+        <h3 class="font-bold text-xl">Prayer &amp; Care</h3>
+        <p class="text-white/80 mt-1">Send a request; we pray and follow up as desired.</p>
+        <div class="mt-4">
+          <a href="#booking" class="btn btn-ghost">Open Prayer Form</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Righteous Rides Detail -->
-  <section id="righteous-rides-detail" class="py-14">
-    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
-      <div class="rounded-2xl glass p-6">
-        <h3 class="display text-2xl font-extrabold grad">Righteous Rides</h3>
-        <p class="mt-3 text-slate-200/90">
-          Drivers place a small QR/email card in the car. If a rider asks, they can request a free Bible or prayer—no pressure, ever. We steward gifts to keep Scripture flowing.
-        </p>
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a class="inline-flex items-center justify-center rounded-xl px-4 py-2 bg-white/10 border border-white/20 font-semibold hover:border-sky-400 hover:text-sky-200"
-             href="mailto:PreacherJonK@gmail.com?subject=Driver%20Kit%20Request%20%E2%80%94%20Righteous%20Rides&body=Hi%20Preacher%20Jon%2C%0A%0AI%27d%20like%20a%20free%20driver%20kit.%0A%0AName%3A%0AShipping%20Address%3A%0ACity%2C%20State%20ZIP%3A%0ARideshare%20platform%28s%29%3A%0A%0AThanks%21">Request FREE Driver Kit</a>
-          <a class="inline-flex items-center justify-center rounded-xl px-4 py-2 bg-sky-500 text-white font-semibold btn-glow hover:bg-sky-400"
-             href="mailto:PreacherJonK@gmail.com?subject=Driver%20Sign%20Up%20%E2%80%94%20Righteous%20Rides&body=Hi%20Preacher%20Jon%2C%0A%0AI%27m%20signing%20up%20as%20a%20driver.%0A%0AName%3A%0ACity%2FState%3A%0ARideshare%20platform%28s%29%3A%0AHours%2Fweek%3A%0A">Sign Up by Email</a>
-        </div>
-        <p class="mt-3 text-xs text-slate-300">Not affiliated with Uber, Lyft, or any rideshare company.</p>
+  <!-- Booking / Contact (MailerLite) -->
+  <section id="booking" class="container mx-auto px-4 pb-24">
+    <div class="glass rounded-2xl p-6 sm:p-8">
+      <div class="max-w-3xl">
+        <h2 class="display text-3xl font-bold mb-2">Booking &amp; Contact</h2>
+        <p class="text-white/80 mb-6">Use the form below for speaking invitations, Bible requests, prayer, or any general questions.</p>
       </div>
 
-      <div class="rounded-2xl glass p-6">
-        <h4 class="font-semibold">Seat-back card preview</h4>
-        <div class="mt-3 rounded-xl bg-white/5 border border-white/10 p-5">
-          <div class="text-center">
-            <div class="mx-auto w-24 h-24 rounded-lg grid place-items-center bg-slate-100/10 border border-white/10">
-              <div class="w-16 h-16 rounded bg-white/10"></div>
+      <!-- ====== MailerLite form (your embed, unchanged in structure) ====== -->
+      <div id="mlb2-29942598" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29942598">
+        <div class="ml-form-align-center ">
+          <div class="ml-form-embedWrapper embedForm">
+            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+              <div class="ml-form-embedContent">
+                <h4>Book Preacher Jon</h4>
+                <p>Preacher Jon loves to share his testimony and shout God's word to all who will listen. If you are interested in having him at your church or event, fill out the form below.</p>
+              </div>
+
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1751779/forms/163460236266440177/subscribe" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-name">
+                      <input aria-label="name" type="text" class="form-control" name="fields[name]" placeholder="Name" autocomplete="given-name">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-phone ml-validate-required">
+                      <input aria-label="phone" aria-required="true" type="text" class="form-control" name="fields[phone]" placeholder="Phone">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-company">
+                      <input aria-label="company" type="text" class="form-control" name="fields[company]" placeholder="Church / Organization">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-last_name">
+                      <input aria-label="last_name" type="text" class="form-control" name="fields[last_name]" placeholder="Date of Event (or Topic)">
+                    </div>
+                  </div>
+
+                  <!-- Optional message field (kept inside your form styling) -->
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group">
+                      <textarea aria-label="message" class="form-control" name="fields[message]" placeholder="Details, prayer request, or question (optional)" rows="4"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Send Request</button>
+                  <button disabled="disabled" style="display:none" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
             </div>
-            <h5 class="mt-4 font-bold text-lg">Free Bible • Prayer • Hope</h5>
-            <p class="text-slate-300 text-sm mt-1">Email us to request a free Bible by mail or a prayer request. Offered with respect—only if you want it.</p>
+
+            <div class="ml-form-successBody row-success" style="display:none">
+              <div class="ml-form-successContent">
+                <h4>Thank you!</h4>
+                <p>We’ll reach out shortly to confirm details and availability.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Socials & Live Feeds -->
-  <section id="socials" class="py-14">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="display text-3xl font-extrabold">Socials</h2>
-      <div class="mt-3 flex items-center gap-4 text-sm">
-        <a class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/20 hover:border-sky-400"
-           href="https://x.com/preacherjonk" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 3l18 18M21 3L3 21" stroke="currentColor" stroke-width="2"/></svg>
-          @preacherjonk
-        </a>
-        <a class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/20 hover:border-pink-400"
-           href="https://www.tiktok.com/@preacherjonk" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 48 48" fill="currentColor"><path d="M41 17.5c-4.6 0-9.1-2-12-5.5V34a11.5 11.5 0 1 1-9.8-11.4V27a6 6 0 1 0 6 6V2h6a12 12 0 0 0 9.8 9.5v6z"/></svg>
-          @preacherjonk
-        </a>
-        <a class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/20 hover:border-sky-400"
-           href="booking.html">Booking</a>
-      </div>
+      <script>
+        function ml_webform_success_29942598() {
+          var $ = window.ml_jQuery || window.jQuery;
+          $('.ml-subscribe-form-29942598 .row-success').show();
+          $('.ml-subscribe-form-29942598 .row-form').hide();
+        }
+      </script>
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+      <script>fetch("https://assets.mailerlite.com/jsonp/1751779/forms/163460236266440177/takel")</script>
+      <!-- ====== /MailerLite form ====== -->
 
-      <div class="mt-8 grid lg:grid-cols-2 gap-8">
-        <div class="rounded-2xl glass p-4">
-          <h3 class="font-semibold mb-3">X Feed</h3>
-          <a class="twitter-timeline" data-theme="dark" data-height="600"
-             href="https://twitter.com/preacherjonk?ref_src=twsrc%5Etfw">Tweets by @preacherjonk</a>
-        </div>
-        <div class="rounded-2xl glass p-4">
-          <h3 class="font-semibold mb-3">TikTok</h3>
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@preacherjonk"
-                      data-unique-id="preacherjonk" data-embed-type="creator"
-                      style="max-width: 780px; min-width: 288px;">
-            <section><a target="_blank" href="https://www.tiktok.com/@preacherjonk">@preacherjonk</a></section>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Donate -->
-  <section id="donate" class="py-16">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="display text-3xl font-extrabold">Give to the Mission</h2>
-      <p class="mt-2 text-slate-200/90">Fuel Scripture in motion. Tap below to open Cash App.</p>
-      <div class="mt-6 flex flex-wrap gap-3 justify-center">
-        <a class="rounded-xl px-5 py-3 bg-sky-500 text-white font-semibold btn-glow hover:bg-sky-400"
-           href="https://cash.app/$PreacherJonK" target="_blank" rel="noopener">Cash App: $PreacherJonK</a>
-        <a class="rounded-xl px-4 py-2 bg-white/10 border border-white/20 font-semibold hover:border-sky-400"
-           href="https://cash.app/$PreacherJonK/25" target="_blank" rel="noopener">$25</a>
-        <a class="rounded-xl px-4 py-2 bg-white/10 border border-white/20 font-semibold hover:border-sky-400"
-           href="https://cash.app/$PreacherJonK/50" target="_blank" rel="noopener">$50</a>
-        <a class="rounded-xl px-4 py-2 bg-white/10 border border-white/20 font-semibold hover:border-sky-400"
-           href="https://cash.app/$PreacherJonK/100" target="_blank" rel="noopener">$100</a>
-      </div>
-      <p class="mt-3 text-xs text-slate-300">Preacher Jon (Righteous Rides is one ministry arm). Update this line with 501(c)(3) language after your IRS letter.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16">
-    <div class="max-w-4xl mx-auto px-4 grid md:grid-cols-2 gap-8">
-      <div class="rounded-2xl glass p-6">
-        <h3 class="display text-2xl font-extrabold">Reach Out</h3>
-        <p class="mt-2 text-slate-200/90">Questions, prayer, speaking, driver kits—send an email.</p>
-        <div class="mt-4 flex flex-wrap gap-3">
-          <a class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-sky-500 text-white font-semibold btn-glow hover:bg-sky-400"
-             href="mailto:PreacherJonK@gmail.com?subject=Contact%20%E2%80%94%20Preacher%20Jon&body=Hi%20Preacher%20Jon%2C%0A%0A(Write%20your%20message%20here.)%0A%0AName%3A%0ACity%2FState%3A%0A">Email Preacher Jon</a>
-          <a class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-white/10 border border-white/20 font-semibold hover:border-sky-400"
-             href="bible.html">Request a Bible</a>
-        </div>
-      </div>
-      <div class="rounded-2xl glass p-6">
-        <h3 class="display text-2xl font-extrabold">Details</h3>
-        <ul class="mt-2 text-slate-200/90 text-sm space-y-2">
-          <li><span class="text-slate-300">Email:</span> <a class="underline" href="mailto:PreacherJonK@gmail.com">PreacherJonK@gmail.com</a></li>
-          <li><span class="text-slate-300">X:</span> <a class="underline" href="https://x.com/preacherjonk" target="_blank" rel="noopener">@preacherjonk</a></li>
-          <li><span class="text-slate-300">TikTok:</span> <a class="underline" href="https://www.tiktok.com/@preacherjonk" target="_blank" rel="noopener">@preacherjonk</a></li>
-          <li class="text-slate-400 text-xs">We keep interactions opt-in and respectful. Not affiliated with Uber/Lyft.</li>
-        </ul>
-      </div>
+      <p class="mt-4 text-xs text-white/60">
+        If the form doesn’t load, use this address:
+        <a class="underline" href="https://assets.mailerlite.com/jsonp/1751779/forms/163460236266440177/subscribe" target="_blank" rel="noopener">Open the booking form</a>
+      </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-10 border-t border-white/10 bg-white/5">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 text-sm text-slate-300">
-      <div>
-        <div class="font-semibold">Preacher Jon</div>
-        <p class="mt-2">Panama City, Florida</p>
-        <p class="mt-1">Email: <a class="underline" href="mailto:PreacherJonK@gmail.com">PreacherJonK@gmail.com</a></p>
-      </div>
-      <div>
-        <div class="font-semibold">Privacy & Respect</div>
-        <p class="mt-2">We collect no data on this site. If you email us, we’ll use the info you send only to fulfill your request. Riders are never pressured; everything is offered on request only.</p>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 mt-8 text-xs text-slate-400">
-      © <span id="y"></span> Preacher Jon. Righteous Rides is a ministry arm. Not affiliated with Uber, Lyft, or any rideshare company.
+  <footer class="border-t border-white/10 py-10 text-center text-white/60">
+    <div class="container mx-auto px-4">
+      <div class="text-sm">© <span id="y"></span> Preacher Jon • Jesus at the Center • Truth &amp; Grace</div>
     </div>
   </footer>
 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <script async src="https://www.tiktok.com/embed.js"></script>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    // year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // make every “Contact / Prayer / Request” button scroll to booking form
+    document.querySelectorAll('a[href="#booking"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const el = document.querySelector('#booking');
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
 </body>
 </html>
