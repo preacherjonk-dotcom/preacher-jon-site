@@ -14,7 +14,7 @@
     :root{
       --ink:#0b1020;
       --ink2:#0a1430;
-      --accent:#f59e0b; /* gold for “Jesus” */
+      --accent:#f59e0b;
     }
     html{scroll-behavior:smooth}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial;background:radial-gradient(1200px 700px at 70% -10%, rgba(245,158,11,.18), transparent 60%), radial-gradient(900px 600px at 10% 0%, rgba(59,130,246,.16), transparent 60%), linear-gradient(180deg, var(--ink2), var(--ink)); color:#e5eeff}
@@ -34,14 +34,12 @@
       filter: drop-shadow(0 30px 80px rgba(0,0,0,.35));
       opacity:.5;
     }
-    @media (max-width: 640px){
-      .hero svg.cross{opacity:.35}
-    }
-    /* cards */
+    @media (max-width: 640px){ .hero svg.cross{opacity:.35} }
+
     .card{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:1rem}
   </style>
 
-  <!-- ==== MailerLite styles (exact, from your embed) ==== -->
+  <!-- Compact MailerLite base styles for booking form -->
   <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1755584");</style>
   <style type="text/css">
     .ml-form-embedSubmitLoad { display:inline-block; width:20px; height:20px; }
@@ -51,7 +49,7 @@
     #mlb2-29942598 .ml-form-embedWrapper{background:#f6f6f6; border-radius:4px; display:inline-block!important; margin:0; padding:0; position:relative}
     #mlb2-29942598 .ml-form-embedWrapper.embedForm{max-width:480px; width:100%}
     #mlb2-29942598 .ml-form-embedBody,#mlb2-29942598 .ml-form-successBody{padding:20px 20px 0 20px}
-    #mlb2-29942598 .ml-form-embedContent h4{color:#000; font-family:'Open Sans',Arial,Helvetica,sans-serif; font-size:30px; font-weight:400; margin:0 0 10px 0; text-align:left}
+    #mlb2-29942598 .ml-form-embedContent h4{color:#000; font:400 30px 'Open Sans',Arial,Helvetica,sans-serif; margin:0 0 10px 0; text-align:left}
     #mlb2-29942598 .ml-form-embedContent p{color:#000; font:400 14px 'Open Sans',Arial,Helvetica,sans-serif; line-height:20px; margin:0 0 10px 0; text-align:left}
     #mlb2-29942598 .ml-form-fieldRow{margin:0 0 10px 0; width:100%}
     #mlb2-29942598 input, #mlb2-29942598 textarea, #mlb2-29942598 select{
@@ -80,7 +78,6 @@
 
   <!-- Hero -->
   <section id="top" class="hero">
-    <!-- Cross overlay (SVG) -->
     <svg class="cross" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <g opacity=".12">
         <rect x="650" y="80" width="100" height="540" rx="8" fill="white"></rect>
@@ -106,7 +103,7 @@
   </section>
 
   <!-- Ministries -->
-  <section id="ministries" class="container mx-auto px-4 pt-6 pb-14">
+  <section id="ministries" class="container mx-auto px-4 pt-6 pb-14 scroll-mt-24">
     <h2 class="display text-3xl font-bold mb-6">Ministries</h2>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -122,7 +119,8 @@
         <h3 class="font-bold text-xl">Bible Requests</h3>
         <p class="text-white/80 mt-1">Anyone can request a free Bible.</p>
         <div class="mt-4">
-          <a href="#booking" class="btn btn-ghost">Open Request Form</a>
+          <!-- changed target to the new Bible section -->
+          <a href="#bible" class="btn btn-ghost">Open Bible Request Form</a>
         </div>
       </div>
 
@@ -136,15 +134,145 @@
     </div>
   </section>
 
-  <!-- Booking / Contact (MailerLite) -->
-  <section id="booking" class="container mx-auto px-4 pb-24">
+  <!-- NEW: Free Bible Request -->
+  <section id="bible" class="container mx-auto px-4 pb-20 scroll-mt-24">
+    <div class="glass rounded-2xl p-6 sm:p-8">
+      <div class="max-w-3xl">
+        <h2 class="display text-3xl font-bold mb-2">Free Bible Request</h2>
+        <p class="text-white/80 mb-6">Use this form to request a free Bible shipped to you.</p>
+      </div>
+
+      <!-- ===== MailerLite Bible form (your embed) ===== -->
+      <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1755584");</style>
+      <style type="text/css">
+        /* (kept exactly as provided, scoped to #mlb2-29942341) */
+        .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}
+        .ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#ffffff #ffffff #ffffff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}
+        @keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        #mlb2-29942341.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}
+        #mlb2-29942341 .ml-form-embedWrapper{background-color:#f6f6f6;border-width:0;border-color:transparent;border-radius:4px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative}
+        #mlb2-29942341 .ml-form-embedWrapper.embedForm{max-width:400px;width:100%}
+        #mlb2-29942341 .ml-form-embedBody,#mlb2-29942341 .ml-form-successBody{padding:20px 20px 0 20px}
+        #mlb2-29942341 .ml-form-embedContent{text-align:left;margin:0 0 20px 0}
+        #mlb2-29942341 .ml-form-embedContent h4{color:#000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:30px;font-weight:400;margin:0 0 10px 0;text-align:left;word-break:break-word}
+        #mlb2-29942341 .ml-form-embedContent p{color:#000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px;font-weight:400;line-height:20px;margin:0 0 10px 0;text-align:left}
+        #mlb2-29942341 .ml-form-fieldRow{margin:0 0 10px 0;width:100%}
+        #mlb2-29942341 input,#mlb2-29942341 textarea,#mlb2-29942341 select{background:#ffffff!important;color:#333333!important;border-color:#cccccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;line-height:21px!important;padding:10px 10px!important;width:100%!important;box-sizing:border-box!important;max-width:100%!important}
+        #mlb2-29942341 .ml-form-embedSubmit button{background-color:#000000!important;border:none!important;border-radius:4px!important;box-shadow:none!important;color:#ffffff!important;cursor:pointer;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:14px!important;font-weight:700!important;line-height:21px!important;height:auto;padding:10px!important;width:100%!important;box-sizing:border-box!important}
+        #mlb2-29942341 .ml-form-embedSubmit button:hover{background-color:#333333!important}
+        .ml-form-recaptcha{margin-bottom:20px}
+        .ml-form-recaptcha.ml-error iframe{border:solid 1px #ff0000}
+        @media only screen and (max-width:400px){.ml-form-embedWrapper.embedDefault,.ml-form-embedWrapper.embedPopup{width:100%!important}}
+        @media screen and (max-width:480px){.ml-form-recaptcha{width:220px!important}.g-recaptcha{transform:scale(.78);-webkit-transform:scale(.78);transform-origin:0 0;-webkit-transform-origin:0 0}}
+      </style>
+
+      <div id="mlb2-29942341" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29942341">
+        <div class="ml-form-align-center ">
+          <div class="ml-form-embedWrapper embedForm">
+            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+              <div class="ml-form-embedContent">
+                <h4>Get A Free Bible</h4>
+                <p>Fill out the form below and we will send you a free bible!</p>
+              </div>
+
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1751779/forms/163459712923207396/subscribe" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-name ml-validate-required">
+                      <input aria-label="name" aria-required="true" type="text" class="form-control" name="fields[name]" placeholder="Name" autocomplete="given-name">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-phone ml-validate-required">
+                      <input aria-label="phone" aria-required="true" type="text" class="form-control" name="fields[phone]" placeholder="Phone">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-company ml-validate-required">
+                      <input aria-label="company" aria-required="true" type="text" class="form-control" name="fields[company]" placeholder="Street Address">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-city ml-validate-required">
+                      <input aria-label="city" aria-required="true" type="text" class="form-control" name="fields[city]" placeholder="City">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-state ml-validate-required">
+                      <input aria-label="state" aria-required="true" type="text" class="form-control" name="fields[state]" placeholder="State">
+                    </div>
+                  </div>
+
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-z_i_p ml-validate-required">
+                      <input aria-label="z_i_p" aria-required="true" type="text" class="form-control" name="fields[z_i_p]" placeholder="Zip">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ml-form-recaptcha ml-validate-required" style="float:left;">
+                  <script src="https://www.google.com/recaptcha/api.js"></script>
+                  <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+                </div>
+
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Subscribe</button>
+                  <button disabled="disabled" style="display:none;" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+
+            <div class="ml-form-successBody row-success" style="display:none">
+              <div class="ml-form-successContent">
+                <h4>Thank you!</h4>
+                <p>You have successfully joined our subscriber list.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function ml_webform_success_29942341() {
+          var $ = window.ml_jQuery || window.jQuery;
+          $('.ml-subscribe-form-29942341 .row-success').show();
+          $('.ml-subscribe-form-29942341 .row-form').hide();
+        }
+      </script>
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+      <script>fetch("https://assets.mailerlite.com/jsonp/1751779/forms/163459712923207396/takel")</script>
+      <!-- ===== /Bible form ===== -->
+
+      <p class="mt-4 text-xs text-white/60">
+        If the form doesn’t load, <a class="underline" target="_blank" rel="noopener" href="https://assets.mailerlite.com/jsonp/1751779/forms/163459712923207396/subscribe">open the Bible request form</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Booking / Contact -->
+  <section id="booking" class="container mx-auto px-4 pb-24 scroll-mt-24">
     <div class="glass rounded-2xl p-6 sm:p-8">
       <div class="max-w-3xl">
         <h2 class="display text-3xl font-bold mb-2">Booking &amp; Contact</h2>
-        <p class="text-white/80 mb-6">Use the form below for speaking invitations, Bible requests, prayer, or any general questions.</p>
+        <p class="text-white/80 mb-6">Use this form for speaking invitations, prayer requests, or general questions.</p>
       </div>
 
-      <!-- ====== MailerLite form (your embed, unchanged in structure) ====== -->
+      <!-- (Booking form kept exactly as before) -->
       <div id="mlb2-29942598" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29942598">
         <div class="ml-form-align-center ">
           <div class="ml-form-embedWrapper embedForm">
@@ -156,42 +284,12 @@
 
               <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1751779/forms/163460236266440177/subscribe" method="post" target="_blank">
                 <div class="ml-form-formContent">
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group ml-field-name">
-                      <input aria-label="name" type="text" class="form-control" name="fields[name]" placeholder="Name" autocomplete="given-name">
-                    </div>
-                  </div>
-
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group ml-field-phone ml-validate-required">
-                      <input aria-label="phone" aria-required="true" type="text" class="form-control" name="fields[phone]" placeholder="Phone">
-                    </div>
-                  </div>
-
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                      <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
-                    </div>
-                  </div>
-
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group ml-field-company">
-                      <input aria-label="company" type="text" class="form-control" name="fields[company]" placeholder="Church / Organization">
-                    </div>
-                  </div>
-
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group ml-field-last_name">
-                      <input aria-label="last_name" type="text" class="form-control" name="fields[last_name]" placeholder="Date of Event (or Topic)">
-                    </div>
-                  </div>
-
-                  <!-- Optional message field (kept inside your form styling) -->
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group">
-                      <textarea aria-label="message" class="form-control" name="fields[message]" placeholder="Details, prayer request, or question (optional)" rows="4"></textarea>
-                    </div>
-                  </div>
+                  <div class="ml-form-fieldRow"><div class="ml-field-group ml-field-name"><input aria-label="name" type="text" class="form-control" name="fields[name]" placeholder="Name" autocomplete="given-name"></div></div>
+                  <div class="ml-form-fieldRow"><div class="ml-field-group ml-field-phone ml-validate-required"><input aria-label="phone" aria-required="true" type="text" class="form-control" name="fields[phone]" placeholder="Phone"></div></div>
+                  <div class="ml-form-fieldRow"><div class="ml-field-group ml-field-email ml-validate-email ml-validate-required"><input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email"></div></div>
+                  <div class="ml-form-fieldRow"><div class="ml-field-group ml-field-company"><input aria-label="company" type="text" class="form-control" name="fields[company]" placeholder="Church / Organization"></div></div>
+                  <div class="ml-form-fieldRow"><div class="ml-field-group ml-field-last_name"><input aria-label="last_name" type="text" class="form-control" name="fields[last_name]" placeholder="Date of Event (or Topic)"></div></div>
+                  <div class="ml-form-fieldRow"><div class="ml-field-group"><textarea aria-label="message" class="form-control" name="fields[message]" placeholder="Details, prayer request, or question (optional)" rows="4"></textarea></div></div>
                 </div>
 
                 <input type="hidden" name="ml-submit" value="1">
@@ -225,7 +323,6 @@
       </script>
       <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
       <script>fetch("https://assets.mailerlite.com/jsonp/1751779/forms/163460236266440177/takel")</script>
-      <!-- ====== /MailerLite form ====== -->
 
       <p class="mt-4 text-xs text-white/60">
         If the form doesn’t load, use this address:
@@ -242,10 +339,8 @@
   </footer>
 
   <script>
-    // year stamp
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // make every “Contact / Prayer / Request” button scroll to booking form
+    // Smooth scroll helper specifically for Booking button (others use native anchor behavior)
     document.querySelectorAll('a[href="#booking"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const el = document.querySelector('#booking');
